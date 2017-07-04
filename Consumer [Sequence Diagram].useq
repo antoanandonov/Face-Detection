@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sequence-diagram version="1.2.0" icons="true" automaticImage="PNG" generate-combined-fragments="true">  
+  <object id="1" language="java" name="view.FaceDetection" project="Face-Detection" 
+    file="/Face-Detection/src/main/java/view/FaceDetection.java" binary="false" label="faceDetection" type="class" 
+    autoSize="true">    
+    <position height="-1" width="-1" x="112" y="0"/>    
+    <execution id="2">      
+      <position height="353" width="0" x="0" y="134"/>    
+    </execution>    
+    <execution id="4">      
+      <position height="290" width="0" x="0" y="176"/>    
+    </execution>  
+  </object>  
+  <object id="7" language="java" name="java.util.concurrent.ExecutorService" project="Face-Detection" 
+    file="/Library/Java/JavaVirtualMachines/jdk1.8.0_40.jdk/Contents/Home/jre/lib/rt.jar" binary="true" 
+    label="executorService" type="interface" autoSize="true">    
+    <position height="-1" width="-1" x="452" y="0"/>    
+    <execution id="6">      
+      <position height="230" width="134" x="131" y="215"/>    
+    </execution>  
+  </object>  
+  <object id="10" language="java" name="mail.MailSender" project="Face-Detection" 
+    file="/Face-Detection/src/main/java/mail/MailSender.java" binary="false" label="mailSender" type="class" 
+    autoSize="true">    
+    <position height="-1" width="-1" x="444" y="0"/>    
+    <execution id="9">      
+      <position height="188" width="99" x="269" y="236"/>    
+    </execution>  
+  </object>  
+  <object id="17" language="java" name="controller.Broker" project="Face-Detection" 
+    file="/Face-Detection/src/main/java/controller/Broker.java" binary="false" label="broker" type="class" 
+    autoSize="true">    
+    <position height="0" width="0" x="0" y="0"/>    
+    <execution id="12">      
+      <position height="21" width="0" x="0" y="268"/>    
+    </execution>  
+  </object>  
+  <object id="18" language="java" name="utils.FaceDetectorUtils" project="Face-Detection" 
+    file="/Face-Detection/src/main/java/utils/FaceDetectorUtils.java" binary="false" label="faceDetectorUtils" 
+    type="class" autoSize="true">    
+    <position height="-1" width="-1" x="705" y="0"/>    
+    <execution id="14">      
+      <position height="21" width="145" x="444" y="326"/>    
+    </execution>  
+  </object>  
+  <object id="19" language="java" name="mail.Mail" project="Face-Detection" 
+    file="/Face-Detection/src/main/java/mail/Mail.java" binary="false" label="mail" type="class" autoSize="true">    
+    <position height="-1" width="-1" x="651" y="0"/>    
+    <execution id="16">      
+      <position height="21" width="51" x="593" y="382"/>    
+    </execution>  
+  </object>  
+  <message id="3" operation="start(javafx.stage.Stage):void" asynchronous="false">    
+    <end type="SOURCE" refId="2"/>    
+    <end type="TARGET" refId="4"/>  
+  </message>  
+  <message id="5" operation="execute(java.lang.Runnable):void" asynchronous="false">    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="6"/>  
+  </message>  
+  <message id="8" operation="run():void" asynchronous="false">    
+    <end type="SOURCE" refId="6"/>    
+    <end type="TARGET" refId="9"/>  
+  </message>  
+  <message id="11" operation="get():org.opencv.core.Mat" asynchronous="false">    
+    <end type="SOURCE" refId="9"/>    
+    <end type="TARGET" refId="12"/>  
+  </message>  
+  <message id="13" operation="convertMatToImage(org.opencv.core.Mat):javafx.scene.image.Image" asynchronous="false">    
+    <end type="SOURCE" refId="9"/>    
+    <end type="TARGET" refId="14"/>  
+  </message>  
+  <message id="15" operation="sendWithAttachment(java.lang.String):void" asynchronous="false">    
+    <end type="SOURCE" refId="9"/>    
+    <end type="TARGET" refId="16"/>  
+  </message>
+</sequence-diagram>

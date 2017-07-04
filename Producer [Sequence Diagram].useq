@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sequence-diagram version="1.2.0" icons="true" automaticImage="PNG" generate-combined-fragments="true">  
+  <object id="1" language="java" name="view.FaceDetection" project="Face-Detection" 
+    file="/Face-Detection/src/main/java/view/FaceDetection.java" binary="false" label="faceDetection" type="class" 
+    autoSize="true">    
+    <position height="-1" width="-1" x="138" y="0"/>    
+    <execution id="2">      
+      <position height="597" width="0" x="0" y="139"/>    
+    </execution>    
+    <execution id="4">      
+      <position height="534" width="0" x="0" y="181"/>    
+    </execution>  
+  </object>  
+  <object id="7" language="java" name="java.lang.Runnable" project="Face-Detection" 
+    file="/Library/Java/JavaVirtualMachines/jdk1.8.0_40.jdk/Contents/Home/jre/lib/rt.jar" binary="true" label="runnable" 
+    type="interface" autoSize="true">    
+    <position height="0" width="0" x="0" y="0"/>    
+    <execution id="6">      
+      <position height="475" width="0" x="0" y="219"/>    
+    </execution>  
+  </object>  
+  <object id="10" language="java" name="controller.FaceDetectionController" project="Face-Detection" 
+    file="/Face-Detection/src/main/java/controller/FaceDetectionController.java" binary="false" 
+    label="faceDetectionController" type="class" autoSize="true">    
+    <position height="0" width="0" x="0" y="0"/>    
+    <execution id="9">      
+      <position height="422" width="0" x="0" y="251"/>    
+    </execution>    
+    <execution id="12">      
+      <position height="348" width="0" x="0" y="304"/>    
+    </execution>  
+  </object>  
+  <object id="15" language="java" name="java.lang.Runnable" project="Face-Detection" 
+    file="/Library/Java/JavaVirtualMachines/jdk1.8.0_40.jdk/Contents/Home/jre/lib/rt.jar" binary="true" 
+    label="runnable1" type="interface" autoSize="true">    
+    <position height="-1" width="-1" x="535" y="0"/>    
+    <execution id="14">      
+      <position height="287" width="89" x="418" y="344"/>    
+    </execution>  
+  </object>  
+  <object id="20" language="java" name="controller.FaceDetectionController" project="Face-Detection" 
+    file="/Face-Detection/src/main/java/controller/FaceDetectionController.java" binary="false" 
+    label="faceDetectionController1" type="class" autoSize="true">    
+    <position height="0" width="0" x="0" y="0"/>    
+    <execution id="17">      
+      <position height="167" width="0" x="0" y="372"/>    
+    </execution>    
+    <execution id="22">      
+      <position height="93" width="0" x="0" y="425"/>    
+    </execution>  
+  </object>  
+  <object id="25" language="java" name="controller.Broker" project="Face-Detection" 
+    file="/Face-Detection/src/main/java/controller/Broker.java" binary="false" label="broker" type="class" 
+    autoSize="true">    
+    <position height="0" width="0" x="0" y="0"/>    
+    <execution id="24">      
+      <position height="21" width="0" x="0" y="476"/>    
+    </execution>  
+  </object>  
+  <object id="26" language="java" name="utils.FaceDetectorUtils" project="Face-Detection" 
+    file="/Face-Detection/src/main/java/utils/FaceDetectorUtils.java" binary="false" label="faceDetectorUtils" 
+    type="class" autoSize="true">    
+    <position height="-1" width="-1" x="691" y="0"/>    
+    <execution id="19">      
+      <position height="21" width="145" x="705" y="589"/>    
+    </execution>  
+  </object>  
+  <message id="3" operation="start(javafx.stage.Stage):void" asynchronous="false">    
+    <end type="SOURCE" refId="2"/>    
+    <end type="TARGET" refId="4"/>  
+  </message>  
+  <message id="5" operation="run():void" asynchronous="false">    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="6"/>  
+  </message>  
+  <message id="8" operation="init(controller.Broker):void" asynchronous="false">    
+    <end type="SOURCE" refId="6"/>    
+    <end type="TARGET" refId="9"/>  
+  </message>  
+  <message id="11" operation="startCamera():void" asynchronous="false">    
+    <end type="SOURCE" refId="9"/>    
+    <end type="TARGET" refId="12"/>  
+  </message>  
+  <message id="13" operation="run():void" asynchronous="false">    
+    <end type="SOURCE" refId="12"/>    
+    <end type="TARGET" refId="14"/>  
+  </message>  
+  <message id="16" operation="grabFrame():org.opencv.core.Mat" asynchronous="false">    
+    <end type="SOURCE" refId="14"/>    
+    <end type="TARGET" refId="17"/>  
+  </message>  
+  <message id="18" operation="convertMatToImage(org.opencv.core.Mat):javafx.scene.image.Image" asynchronous="false">    
+    <end type="SOURCE" refId="14"/>    
+    <end type="TARGET" refId="19"/>  
+  </message>  
+  <message id="21" operation="detectAndDisplay(org.opencv.core.Mat):void" asynchronous="false">    
+    <end type="SOURCE" refId="17"/>    
+    <end type="TARGET" refId="22"/>  
+  </message>  
+  <message id="23" operation="put(org.opencv.core.Mat):void" asynchronous="false">    
+    <end type="SOURCE" refId="22"/>    
+    <end type="TARGET" refId="24"/>  
+  </message>
+</sequence-diagram>
